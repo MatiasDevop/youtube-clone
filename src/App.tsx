@@ -1,14 +1,18 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import "./index.css";
+import PageHeader from "./layout/PageHeader";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>Youtube</div>
+      <div className="max-h-screen flex flex-col">
+        <PageHeader />
+        <div className="">1</div>
+        <div>122</div>
+      </div>
     </>
   );
 }
