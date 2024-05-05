@@ -41,7 +41,7 @@ const CategoryPills = ({
   }, [categories, translate]);
 
   return (
-    <div ref={containerRef} className="overflow-x-hidden relative">
+    <div ref={containerRef} className="overflow-x-hidden relative h-full">
       <div
         className="flex whitespace-nowrap gap-3
       transition-transform w-[max-content]"
