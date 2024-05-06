@@ -43,7 +43,7 @@ const Sidebar = () => {
       </aside>
       <aside
         className="w-56 lg:sticky absolute top-0
-      overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 flex"
+      overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 lg:flex hidden"
       >
         <LargeSidebarSection>
           <LargeSidebarItem isActive IconOrImgUrl={Home} title="Home" url="/" />
