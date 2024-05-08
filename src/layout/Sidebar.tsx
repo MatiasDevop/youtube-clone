@@ -24,13 +24,17 @@ import { Children, ElementType, ReacNode, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { Button, buttonStyles } from "../components/Button";
 import { playlists, subscriptions } from "../data/sidebar";
+import { useSidebarContext } from "../contexts/SidebarContext";
 
 const Sidebar = () => {
+  const { isLargeOpen, isSmallOpen } = useSidebarContext();
+
   return (
     <>
+      {/* smaller sidbar */}
       <aside
-        className="sticky top-0 overflow-y-auto scrollbar-hidden pb-4
-      flex flex-col ml-1 lg:hidden"
+        className={`sticky top-0 overflow-y-auto scrollbar-hidden pb-4
+      flex flex-col ml-1 ${isLargeOpen ? "lg:hidden" : "lg:flex"}`}
       >
         <SmallSidebarItem Icon={Home} title="Home" url="/" />
         <SmallSidebarItem Icon={Repeat} title="Shorts" url="/shorts" />
@@ -41,6 +45,7 @@ const Sidebar = () => {
         />
         <SmallSidebarItem Icon={Library} title="Library" url="/library" />
       </aside>
+      {/* Larger sidebar */}
       <aside
         className="w-56 lg:sticky absolute top-0
       overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 lg:flex hidden"
