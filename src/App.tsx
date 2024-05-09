@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <SidebarProvider>
-        <div className="max-h-screen flex flex-col gap-2">
+        <div className="max-h-screen flex flex-col">
           <PageHeader />
           <div className="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
             <Sidebar />
