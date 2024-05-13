@@ -34,8 +34,6 @@ const VideoGridItem = ({
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  console.log("channnnn", channel);
-
   useEffect(() => {
     if (videoRef.current == null) return;
 
@@ -62,7 +60,7 @@ const VideoGridItem = ({
           alt="video src"
         />
         <div
-          className="absolute bottom-1 right-1 
+          className="absolute bottom-1 my-5 right-1 
         bg-secondary-dark text-secondary text-sm px-0.5 rounded"
         >
           {formatDuration(duration)}
