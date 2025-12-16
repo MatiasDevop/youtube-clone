@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { categories } from "../data/home";
 import { Button } from "./Button";
 import { useEffect, useRef, useState } from "react";
 
@@ -18,6 +17,7 @@ const CategoryPills = ({
   const [translate, setTranslate] = useState(0);
   const [isLeftVisible, setIsLeftVisible] = useState(false);
   const [isRightVisible, setIsRightVisible] = useState(false);
+  5;
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
